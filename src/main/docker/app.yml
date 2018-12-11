@@ -1,0 +1,14 @@
+version: '2'
+services:
+    mortgage-app:
+        image: mortgage
+        environment:
+            - _JAVA_OPTIONS=-Xmx512m -Xms256m
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:oracle:thin:@mortgage-oracle:1521:Mortgage
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+            - SPRING_DATA_JEST_URI=http://mortgage-elasticsearch:9200
+    mortgage-elasticsearch:
+        extends:
+            file: elasticsearch.yml
+            service: mortgage-elasticsearch

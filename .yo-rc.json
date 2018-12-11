@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "applicationType": "microservice",
+    "gitCompany": "",
+    "baseName": "Mortgage",
+    "packageName": "com.hsbc.gr",
+    "packageFolder": "com/hsbc/gr",
+    "serverPort": 8081,
+    "serviceDiscoveryType": false,
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "oracle",
+    "prodDatabaseType": "oracle",
+    "searchEngine": "elasticsearch",
+    "enableSwaggerCodegen": "true",
+    "messageBroker": false,
+    "buildTool": "gradle",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [
+      "cucumber"
+    ],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "el",
+      "en"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "5.7.0",
+    "jwtSecretKey": "NzU3NzNiNzJhYTRiZGQ0ZjYwYjkzNDI2OWQ3NDU2MGFiYzRmOTYzZjA5MzhmYTNiMDZmOGFmMDVhYjkyOWI2MzNlYjg5OTVjZGQyMThmZDA1MjYzNzU3YjE0MDM0YTM2MzYzZmI2NTA2NThiMDQwNmVlYzFmZjc3YWVmNzBlM2I=",
+    "otherModules": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
