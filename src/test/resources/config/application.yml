@@ -16,10 +16,10 @@
 
 spring:
     application:
-        name: Mortgage
+        name: mortgage
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:h2:mem:Mortgage;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+        url: jdbc:h2:mem:mortgage;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
         name:
         username:
         password:
@@ -43,11 +43,6 @@ spring:
             hibernate.generate_statistics: true
             hibernate.hbm2ddl.auto: validate
             hibernate.jdbc.time_zone: UTC
-    data:
-        elasticsearch:
-            properties:
-                path:
-                    home: build/elasticsearch
     liquibase:
         contexts: test
     mail:
@@ -83,11 +78,14 @@ jhipster:
             host: localhost
             port: 5000
             queue-size: 512
+    mail:
+        from: test@localhost
+        base-url: http://127.0.0.1:8080
     security:
         authentication:
             jwt:
                 # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-                base64-secret: NzU3NzNiNzJhYTRiZGQ0ZjYwYjkzNDI2OWQ3NDU2MGFiYzRmOTYzZjA5MzhmYTNiMDZmOGFmMDVhYjkyOWI2MzNlYjg5OTVjZGQyMThmZDA1MjYzNzU3YjE0MDM0YTM2MzYzZmI2NTA2NThiMDQwNmVlYzFmZjc3YWVmNzBlM2I=
+                base64-secret: YjU1NDZiMmRmNGMzM2U1Y2JlYTkyYzkzYzgwYjlmZWVjYjZjNjc1ZmQyNTBhNWQ4NDBlZGQwYmE0NGMzODcyZjI0NDU1MzMxMTYwOTJjOTVkNDdkYzBlZGJjZTMyMzVjY2Y1NGZkNWNjOWFiODEyZDNhOWRjMDgwYmNlODM2OGI=
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
